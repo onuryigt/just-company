@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from "next/image"
 
 interface StoryCard {
   image: string;
@@ -85,9 +86,11 @@ export default function SuccessStories() {
               className="relative group"
             >
               <div className="aspect-[4/5] overflow-hidden rounded-3xl">
-                <img
+                <Image
                   src={story.image}
                   alt={story.name}
+                  width={500}
+                  height={300}
                   className="w-full h-full object-cover"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-b ${story.gradient} opacity-10`} />

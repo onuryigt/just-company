@@ -3,6 +3,7 @@
 import { motion, LazyMotion, domAnimation, m } from 'framer-motion';
 import Link from 'next/link';
 import { useMemo } from 'react';
+import { Metadata } from "next"
 
 export default function JustCreative() {
   const services = useMemo(() => [
