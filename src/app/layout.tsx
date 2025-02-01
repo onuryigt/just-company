@@ -7,7 +7,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Just Company',
+  title: 'Just',
   description: 'Make it JUST Perfect - Yaratıcı çözümler, kusursuz sonuçlar',
 };
 
