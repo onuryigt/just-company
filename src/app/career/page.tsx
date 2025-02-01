@@ -189,7 +189,7 @@ export default function Career() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-gray-900"
                         placeholder="Adınız Soyadınız"
                       />
                     </label>
@@ -200,7 +200,7 @@ export default function Career() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-gray-900"
                         placeholder="ornek@email.com"
                       />
                     </label>
@@ -211,7 +211,7 @@ export default function Career() {
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-gray-900"
                         placeholder="0555 555 55 55"
                       />
                     </label>
@@ -225,7 +225,7 @@ export default function Career() {
                         required
                         value={formData.department}
                         onChange={handleDepartmentChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-gray-900"
                       >
                         <option value="">Seçiniz</option>
                         {departments.map((dept) => (
@@ -242,7 +242,7 @@ export default function Career() {
                         required
                         value={formData.position}
                         onChange={(e) => setFormData(prev => ({ ...prev, position: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-gray-900"
                         disabled={!selectedDepartment}
                       >
                         <option value="">Seçiniz</option>
@@ -260,7 +260,7 @@ export default function Career() {
                         required
                         value={formData.experience}
                         onChange={(e) => setFormData(prev => ({ ...prev, experience: e.target.value }))}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-gray-900"
                       >
                         <option value="">Seçiniz</option>
                         <option value="0-1">0-1 Yıl</option>
@@ -281,7 +281,7 @@ export default function Career() {
                       required
                       value={formData.education}
                       onChange={(e) => setFormData(prev => ({ ...prev, education: e.target.value }))}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-gray-900"
                       placeholder="Üniversite, Bölüm, Mezuniyet Yılı"
                     />
                   </label>
@@ -291,7 +291,7 @@ export default function Career() {
                       required
                       value={formData.message}
                       onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all h-32"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all h-32 text-gray-900"
                       placeholder="Motivasyonunuzu ve hedeflerinizi bizimle paylaşın"
                     />
                   </label>
@@ -305,7 +305,7 @@ export default function Career() {
                       type="url"
                       value={formData.portfolio}
                       onChange={(e) => setFormData(prev => ({ ...prev, portfolio: e.target.value }))}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-gray-900"
                       placeholder="https://portfolio.com"
                     />
                   </label>
@@ -315,7 +315,7 @@ export default function Career() {
                       type="url"
                       value={formData.linkedin}
                       onChange={(e) => setFormData(prev => ({ ...prev, linkedin: e.target.value }))}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-gray-900"
                       placeholder="https://linkedin.com/in/..."
                     />
                   </label>
@@ -325,7 +325,7 @@ export default function Career() {
                       type="url"
                       value={formData.github}
                       onChange={(e) => setFormData(prev => ({ ...prev, github: e.target.value }))}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-gray-900"
                       placeholder="https://github.com/..."
                     />
                   </label>
