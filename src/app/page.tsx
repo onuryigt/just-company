@@ -79,9 +79,9 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center mb-24"
             >
-              <h2 className="text-5xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">Hizmetlerimiz</h2>
+              <h2 className="text-5xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">Sektörlerimiz</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                İşletmenizi bir adım öne taşıyacak çözümlerimizle tanışın
+                
               </p>
             </m.div>
 

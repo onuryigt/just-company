@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <header className="fixed w-full z-50">
@@ -27,6 +28,7 @@ export default function Header() {
               />
             </Link>
 
+            {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-1">
               {/* Sektörler Dropdown */}
               <div 
@@ -98,13 +100,85 @@ export default function Header() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden p-2 hover:bg-gray-50 rounded-full">
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 hover:bg-gray-50 rounded-full"
+            >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                />
               </svg>
             </button>
           </div>
         </nav>
+
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden overflow-hidden bg-white rounded-b-2xl"
+            >
+              <div className="px-6 py-4 space-y-2 border-t border-gray-100">
+                <Link 
+                  href="/sectors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-xl hover:bg-gray-50 transition-colors text-gray-600 hover:text-gray-900"
+                >
+                  Sektörler
+                </Link>
+                <Link 
+                  href="/sectors/justfood"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-2 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-colors ml-4"
+                >
+                  JustFood
+                </Link>
+                <Link 
+                  href="/sectors/justcode"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-2 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-colors ml-4"
+                >
+                  JustCode
+                </Link>
+                <Link 
+                  href="/sectors/justcreative"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-2 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-50 rounded-lg transition-colors ml-4"
+                >
+                  JustCreative
+                </Link>
+                <Link 
+                  href="/about"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-xl hover:bg-gray-50 transition-colors text-gray-600 hover:text-gray-900"
+                >
+                  Hakkımızda
+                </Link>
+                <Link 
+                  href="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-xl hover:bg-gray-50 transition-colors text-gray-600 hover:text-gray-900"
+                >
+                  İletişim
+                </Link>
+                <Link 
+                  href="/career"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-xl bg-rose-500 text-white hover:bg-rose-600 transition-colors text-center font-medium"
+                >
+                  Kariyer →
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
